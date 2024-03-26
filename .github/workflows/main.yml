@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Deploy website on push
+name: 🚀 Déploiement FTP vers https://smb33.keosystems.com/nsi1/projet1/
 jobs:
   web-deploy:
     name: 🎉 Deploy
