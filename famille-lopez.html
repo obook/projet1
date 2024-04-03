@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="Fr">
-
-  <head>
+  <!-- Entête -->
+<head>
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
+    <!-- Styles -->
     <link href="styles/index.css" rel="stylesheet">
-    <title>Mon premier serveur Web</title>
-  </head>
+    <title>Famille lopez</title>
+</head>
 
-  <body>
-    <nav>
+  <!-- Contenu -->
+<body>
+<nav>
         <a href="index.html" onclick="loadPage('accueil.html')">Accueil</a>
         <a href="famille-lopez.html" onclick="loadPage('famille-lopez.html')">Famille Lopez</a>
         <a href="bassirou.html" onclick="loadPage('bassirou.html')">Bassirou</a>
         <a href="son.html" onclick="loadPage('son.html')">Son</a>
-    </nav>
+</nav>
 
-    <img src='images/Python-logo.svg' width='64'>
-    <h1>Bonjour !</h1>
+  <h1>Bonjour !</h1>
 
-<p>le projet de chat disparu, AD laurent, fernand lopez</p>
+  <p>Petites photo de la famille lopez.</p>
 
+
+    <img src='images/famillelopez.jfif' width='300'>
+    <img src='images/familllopez.jfif' width='300'>
     <span id='horloge'></span>
     <span id="balise_temperature"></span>
     <div id="menu-toggle" onclick="toggleMenu()">
@@ -33,6 +36,7 @@
     </div>
 
 
+
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
@@ -40,24 +44,24 @@
         }
 
         function loadPage(page) {
-
+            // Charger le contenu de la page spécifiée dans la div #contenu
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("contenu").innerHTML = this.responseText;
-                    toggleMenu();
+                    toggleMenu(); // Fermer le menu après avoir cliqué sur un lien
                 }
             };
             xhttp.open("GET", page, true);
             xhttp.send();
         }
-    </script>
+</script>
+    <!-- Contenu de la page -->
 
 
 
+    <!-- Programme JavaScript -->
+<script type="text/javascript" charset="utf-8" src="javascript/index.js"></script>
 
-
-    <script type="text/javascript" charset="utf-8" src="javascript/index.js"></script>
-
-      </body>
-    </html>
+</body>
+</html>

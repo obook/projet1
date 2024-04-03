@@ -8,8 +8,9 @@
     <meta http-equiv="Expires" content="0" />
 
     <link href="styles/index.css" rel="stylesheet">
-    <title>Mon premier serveur Web</title>
+    <title>Mon premier serveur son</title>
   </head>
+
 
   <body>
     <nav>
@@ -18,19 +19,22 @@
         <a href="bassirou.html" onclick="loadPage('bassirou.html')">Bassirou</a>
         <a href="son.html" onclick="loadPage('son.html')">Son</a>
     </nav>
-
     <img src='images/Python-logo.svg' width='64'>
     <h1>Bonjour !</h1>
 
-<p>le projet de chat disparu, AD laurent, fernand lopez</p>
-
+<p>le serveur web de son.</p>
     <span id='horloge'></span>
     <span id="balise_temperature"></span>
+
+    <iframe width="110" height="200" src="https://www.myinstants.com/instant/prout-1175/embed/" frameborder="0" scrolling="no"></iframe>
+    <iframe width="110" height="200" src="https://www.myinstants.com/instant/prout-57176/embed/" frameborder="0" scrolling="no"></iframe>
     <div id="menu-toggle" onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
+
+
 
 
     <script>
@@ -50,13 +54,11 @@
             };
             xhttp.open("GET", page, true);
             xhttp.send();
+
         }
     </script>
 
-
-
-
-
+    <!-- Programme JavaScript -->
     <script type="text/javascript" charset="utf-8" src="javascript/index.js"></script>
 
       </body>

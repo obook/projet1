@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="Fr">
-
+  <!-- Entête -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
+    <!-- Styles -->
     <link href="styles/index.css" rel="stylesheet">
-    <title>Mon premier serveur Web</title>
+    <title>Mon premier Bassirou</title>
   </head>
 
+  <!-- Contenu -->
   <body>
     <nav>
         <a href="index.html" onclick="loadPage('accueil.html')">Accueil</a>
@@ -18,19 +19,21 @@
         <a href="bassirou.html" onclick="loadPage('bassirou.html')">Bassirou</a>
         <a href="son.html" onclick="loadPage('son.html')">Son</a>
     </nav>
-
     <img src='images/Python-logo.svg' width='64'>
     <h1>Bonjour !</h1>
 
-<p>le projet de chat disparu, AD laurent, fernand lopez</p>
+<p>La page de bassirou,   <strong>mange vite.</strong></p>
 
+    <img src='images/bassi.jfif' width='200'>
     <span id='horloge'></span>
     <span id="balise_temperature"></span>
+
     <div id="menu-toggle" onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
+
 
 
     <script>
@@ -40,12 +43,12 @@
         }
 
         function loadPage(page) {
-
+            // Charger le contenu de la page spécifiée dans la div #contenu
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("contenu").innerHTML = this.responseText;
-                    toggleMenu();
+                    toggleMenu(); // Fermer le menu après avoir cliqué sur un lien
                 }
             };
             xhttp.open("GET", page, true);
@@ -54,9 +57,7 @@
     </script>
 
 
-
-
-
+    <!-- Programme JavaScript -->
     <script type="text/javascript" charset="utf-8" src="javascript/index.js"></script>
 
       </body>
